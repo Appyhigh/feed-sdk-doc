@@ -37,7 +37,7 @@ A news feed sdk to seamlessly integrate news in your application
     ```groovy
 
 	dependencies {
-	    implementation 'com.github.Appyhigh:news-feed-sdk:1.0.2'
+	    implementation 'com.github.Appyhigh:news-feed-sdk:1.0.3'
 	    // ...
 	}
     ```
@@ -82,12 +82,12 @@ A news feed sdk to seamlessly integrate news in your application
     ```
 5)  Inititalize SDK(Recommended to initialize in Splash or Main Activity)
 
-    initializeSdk(context: Context, lifecycle: Lifecycle, user: User? = null)
+    initializeSdk(context: Context, lifecycle: Lifecycle, versionCode:String, versionName:String user: User? = null)
 
     ***Kotlin***
     ```kotlin
     private fun initFeedSDK() {
-         FeedSdk().initializeSdk(this, lifecycle, user) //user can be null also
+         FeedSdk().initializeSdk(this, lifecycle, BuildConfig.VERSION_CODE.toString(), BuildConfig.VERSION_NAME, user) //user can be null also
          FeedSdk().setFirebaseDynamicLink(**dynamic link domain of parent app**)
          FeedSdk().setShareBody(** shareBody text of the dynamic links of posts that are shared from feedsdk **)
          SpUtil.getGEOPoints(this)  // this is required for feedSDK to set the language by location
@@ -96,7 +96,7 @@ A news feed sdk to seamlessly integrate news in your application
     ***Java***
     ```java
     void initFeedSDK(){
-         new FeedSdk().initializeSdk(this, getLifecycle(), user); //user can be null also
+         new FeedSdk().initializeSdk(this, getLifecycle(), BuildConfig.VERSION_CODE.toString(), BuildConfig.VERSION_NAME, user); //user can be null also
          FeedSdk.Companion.setMFirebaseDynamicLink(**dynamic link domain of parent app**)
          FeedSdk.Companion.setShareBody(** shareBody text of the dynamic links of posts that are shared from feedsdk **)
          SpUtil.Companion.getGEOPoints(this)  // this is required for feedSDK to set the language by location
