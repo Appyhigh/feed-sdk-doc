@@ -37,7 +37,7 @@ A news feed sdk to seamlessly integrate news in your application
     ```groovy
 
 	dependencies {
-	    implementation 'com.github.Appyhigh:news-feed-sdk:1.0.3'
+	    implementation 'com.github.Appyhigh:news-feed-sdk:1.0.4'
 	    // ...
 	}
     ```
@@ -210,6 +210,9 @@ A news feed sdk to seamlessly integrate news in your application
             getString(R.string.ad_unit_scorecard),
             getString(R.string.ad_unit_commentary),
             getString(R.string.ad_unit_finished_match),
+            getString(R.string.ad_unit_between_article),
+            getString(R.string.ad_unit_article_end),
+            getString(R.string.ad_post_interstitial),
             getString(R.string.search_footer_banner)
         )
         FeedSdk().setAdsModel(adsModel)
@@ -231,7 +234,10 @@ A news feed sdk to seamlessly integrate news in your application
                 getString(R.string.ad_unit_scorecard),
                 getString(R.string.ad_unit_commentary),
                 getString(R.string.ad_unit_finished_match),
-                getString(R.string.search_footer_banner)
+                getString(R.string.ad_unit_between_article),
+	        getString(R.string.ad_unit_article_end),
+	        getString(R.string.ad_post_interstitial),
+	        getString(R.string.search_footer_banner)
         );        
         FeedSdk.Companion.setMAdsModel(adsModel);
         // ...
