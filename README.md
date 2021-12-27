@@ -104,6 +104,7 @@ A news feed sdk to seamlessly integrate news in your application
     ```
 
 6)  [**Handle Notifications & Dynamic Links**](#handle-notifications--dynamic-links)
+7)  <a href="https://firebase.google.com/docs/perf-mon/get-started-android" ><b>Add firebase performance sdk in your parent app</b></a> (Optional)
 
 ## Custom Views
 [(Back to top)](#table-of-contents)
