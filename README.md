@@ -362,7 +362,7 @@ A news feed sdk to seamlessly integrate news in your application
 [(Back to top)](#features)
 
 #### Pluto SDK
-1. If your parent app has pluto sdk then add the following lines before intialiazing the sdk to get the newtork logs of feedsdk in pluto.
+If your parent app has pluto sdk then add the following lines before intialiazing the sdk to get the newtork logs of feedsdk in pluto.
 
    ***Kotlin***
    ```kotlin
@@ -376,6 +376,7 @@ A news feed sdk to seamlessly integrate news in your application
 To add languages directly from parent app, use `setLanguagesForFeedSDK(languages:String)`
 
  `languages` param should be a string of language codes with "," seperated.
+ 
 ***Kotlin***
    ```kotlin
    FeedSdk().setLanguagesForFeedSDK("en,hi")
@@ -388,6 +389,7 @@ To add languages directly from parent app, use `setLanguagesForFeedSDK(languages
 To add interests directly from parent app, use `setInterestsForFeedSDK(interests:String)`
 
  `interests` param should be a string of interest id with "," seperated.
+ 
 ***Kotlin***
    ```kotlin
    FeedSdk().setInterestsForFeedSDK("cricket,sports,news")
