@@ -82,12 +82,12 @@ A news feed sdk to seamlessly integrate news in your application
     ```
 5)  Inititalize SDK(Recommended to initialize in Splash or Main Activity)
 
-    initializeSdk(context: Context, lifecycle: Lifecycle, versionCode:String, versionName:String user: User? = null)
+    initializeSdk(context: Context, lifecycle: Lifecycle, versionCode:String, versionName:String user: User? = null, showCricketNotification:Boolean?=true)
 
     ***Kotlin***
     ```kotlin
     private fun initFeedSDK() {
-         FeedSdk().initializeSdk(this, lifecycle, BuildConfig.VERSION_CODE.toString(), BuildConfig.VERSION_NAME, user) //user can be null also
+         FeedSdk().initializeSdk(this, lifecycle, BuildConfig.VERSION_CODE.toString(), BuildConfig.VERSION_NAME, user, showCricketNotification) //user can be null also
          FeedSdk().setFirebaseDynamicLink(**dynamic link domain of parent app**)
          FeedSdk().setShareBody(** shareBody text of the dynamic links of posts that are shared from feedsdk **)
          SpUtil.getGEOPoints(this)  // this is required for feedSDK to set the language by location
@@ -96,7 +96,7 @@ A news feed sdk to seamlessly integrate news in your application
     ***Java***
     ```java
     void initFeedSDK(){
-         new FeedSdk().initializeSdk(this, getLifecycle(), BuildConfig.VERSION_CODE.toString(), BuildConfig.VERSION_NAME, user); //user can be null also
+         new FeedSdk().initializeSdk(this, getLifecycle(), BuildConfig.VERSION_CODE.toString(), BuildConfig.VERSION_NAME, user, showCricketNotification); //user can be null also
          FeedSdk.Companion.setMFirebaseDynamicLink(**dynamic link domain of parent app**)
          FeedSdk.Companion.setShareBody(** shareBody text of the dynamic links of posts that are shared from feedsdk **)
          SpUtil.Companion.getGEOPoints(this)  // this is required for feedSDK to set the language by location
@@ -200,7 +200,7 @@ A news feed sdk to seamlessly integrate news in your application
    ***Kotlin***
     ```kotlin
     private fun initFeedSDK() {
-         FeedSdk().initializeSdk(this, lifecycle, user) //user can be null also
+         FeedSdk().initializeSdk(this, lifecycle, user, showCricketNotification) //user can be null also
          // ...
          // all the ad ids should be native ad units except search_footer_banner(banner ad unit)
          val adsModel = AdsModel(
@@ -224,7 +224,7 @@ A news feed sdk to seamlessly integrate news in your application
    ***Java***
     ```java
     void initFeedSDK(){
-         new FeedSdk().initializeSdk(this, getLifecycle(), user); //user can be null also
+         new FeedSdk().initializeSdk(this, getLifecycle(), user, showCricketNotification); //user can be null also
          // all the ad ids should be native ad units except search_footer_banner(banner ad unit)
          // ...
           AdsModel adsModel = new AdsModel(
@@ -250,7 +250,7 @@ A news feed sdk to seamlessly integrate news in your application
    ***Kotlin***
    ```kotlin
    private fun initFeedSDK() {
-        FeedSdk().initializeSdk(this, lifecycle, user) //user can be null also
+        FeedSdk().initializeSdk(this, lifecycle, user, showCricketNotification) //user can be null also
         // ...
         FeedSdk().setShowAds(false)
        // ...
@@ -259,7 +259,7 @@ A news feed sdk to seamlessly integrate news in your application
    ***Java***
    ```java
    void initFeedSDK(){
-        new FeedSdk().initializeSdk(this, getLifecycle(), user); //user can be null also  
+        new FeedSdk().initializeSdk(this, getLifecycle(), user, showCricketNotification); //user can be null also  
         // ...
        FeedSdk.Companion.setShowAds(false);
        // ...
@@ -277,7 +277,7 @@ A news feed sdk to seamlessly integrate news in your application
     ***Kotlin***
     ```kotlin
     private fun initFeedSDK() {
-         FeedSdk().initializeSdk(this, lifecycle, user) //user can be null also
+         FeedSdk().initializeSdk(this, lifecycle, user, showCricketNotification) //user can be null also
          // ...
          FeedSdk().setSearchStickyNotification(defaultBackground:String, intent: Intent)
         // ...
@@ -286,7 +286,7 @@ A news feed sdk to seamlessly integrate news in your application
     ***Java***
     ```java
     void initFeedSDK(){
-         new FeedSdk().initializeSdk(this, getLifecycle(), user); //user can be null also  
+         new FeedSdk().initializeSdk(this, getLifecycle(), user, showCricketNotification); //user can be null also  
          // ...
         new FeedSdk().setSearchStickyNotification(defaultBackground, getIntent());
         // ...
@@ -300,7 +300,7 @@ A news feed sdk to seamlessly integrate news in your application
             com.appyhigh.newsfeedsdk.Constants.isVideoFromSticky = true
         }
         // ...
-       FeedSdk().initializeSdk(this, lifecycle, user) //user can be null also
+       FeedSdk().initializeSdk(this, lifecycle, user, showCricketNotification) //user can be null also
         // ...
        
    ```
@@ -310,7 +310,7 @@ A news feed sdk to seamlessly integrate news in your application
            com.appyhigh.newsfeedsdk.Constants.INSTANCE.setVideoFromSticky(true);
        }
        // ...
-       new FeedSdk().initializeSdk(this, getLifecycle(), user); //user can be null also  
+       new FeedSdk().initializeSdk(this, getLifecycle(), user, showCricketNotification); //user can be null also  
        // ...
    ``` 
 
@@ -416,7 +416,7 @@ To add interests directly from parent app, use `setInterestsForFeedSDK(interests
            SpUtil.pushIntent = null
        }
         // ...
-       FeedSdk().initializeSdk(this, lifecycle, user) //user can be null also
+       FeedSdk().initializeSdk(this, lifecycle, user, showCricketNotification) //user can be null also
         // ...
        
    ```
@@ -428,7 +428,7 @@ To add interests directly from parent app, use `setInterestsForFeedSDK(interests
             SpUtil.Companion.setPushIntent(null);
         }
        // ...
-       new FeedSdk().initializeSdk(this, getLifecycle(), user); //user can be null also  
+       new FeedSdk().initializeSdk(this, getLifecycle(), user, showCricketNotification); //user can be null also  
        // ...
    ```
 2) Add the following lines after initializing the sdk where you handle your parent app notification intent.
