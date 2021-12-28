@@ -37,7 +37,7 @@ A news feed sdk to seamlessly integrate news in your application
     ```groovy
 
 	dependencies {
-	    implementation 'com.github.Appyhigh:news-feed-sdk:1.0.4.4'
+	    implementation 'com.github.Appyhigh:news-feed-sdk:1.0.4.7'
 	    // ...
 	}
     ```
@@ -104,7 +104,7 @@ A news feed sdk to seamlessly integrate news in your application
     ```
 
 6)  [**Handle Notifications & Dynamic Links**](#handle-notifications--dynamic-links)
-8)  <a href="https://firebase.google.com/docs/perf-mon/get-started-android" ><b>Add firebase performance sdk in your parent app</b></a> (Optional)
+7)  <a href="https://firebase.google.com/docs/perf-mon/get-started-android" ><b>Add firebase performance sdk in your parent app</b></a> (Optional)
 
 ## Custom Views
 [(Back to top)](#table-of-contents)
@@ -190,7 +190,7 @@ A news feed sdk to seamlessly integrate news in your application
 
 - [Ads](#ads)
 - [Search Sticky Bar](#search-sticky-bar)
-- [Pluto SDK](#pluto-sdk)
+- [Functions](#functions)
 
 ### Ads
 [(Back to top)](#features)
@@ -358,10 +358,11 @@ A news feed sdk to seamlessly integrate news in your application
    ```java
    startActivity(new Intent(this, SettingsActivity.class));
    ```
-### Pluto SDK
+### Functions
 [(Back to top)](#features)
 
-If your parent app has pluto sdk then add the following lines before intialiazing the sdk to get the newtork logs of feedsdk in pluto.
+#### Pluto SDK
+1. If your parent app has pluto sdk then add the following lines before intialiazing the sdk to get the newtork logs of feedsdk in pluto.
 
    ***Kotlin***
    ```kotlin
@@ -370,6 +371,30 @@ If your parent app has pluto sdk then add the following lines before intialiazin
    ***Java***
    ```java
    FeedSdk.Companion.setHasPluto(true);
+   ```
+#### Add languages for feedsdk
+To add languages directly from parent app, use `setLanguagesForFeedSDK(languages:String)`
+
+ `languages` param should be a string of language codes with "," seperated.
+***Kotlin***
+   ```kotlin
+   FeedSdk().setLanguagesForFeedSDK("en,hi")
+   ```
+   ***Java***
+   ```java
+   new FeedSdk().setLanguagesForFeedSDK("en,hi");
+   ```
+#### Add interests for feedsdk
+To add interests directly from parent app, use `setInterestsForFeedSDK(interests:String)`
+
+ `interests` param should be a string of interest id with "," seperated.
+***Kotlin***
+   ```kotlin
+   FeedSdk().setInterestsForFeedSDK("cricket,sports,news")
+   ```
+   ***Java***
+   ```java
+   new FeedSdk().setInterestsForFeedSDK("cricket,sports,news");
    ```
 
 ## Handle Notifications & Dynamic Links
