@@ -13,7 +13,7 @@ A news feed sdk to seamlessly integrate news in your application
 ## Initialization
 [(Back to top)](#table-of-contents)
 
-1)  Add the auth token in `gradle.properties` file
+1)  Add the auth token in `$HOME/.gradle/gradle.properties` file
     ```grrovy
     authToken=**JITPACK_AUTH_TOKEN**
     ```
