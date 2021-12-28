@@ -104,7 +104,7 @@ A news feed sdk to seamlessly integrate news in your application
     ```
 
 6)  [**Handle Notifications & Dynamic Links**](#handle-notifications--dynamic-links)
-7)  <a href="https://firebase.google.com/docs/perf-mon/get-started-android" ><b>Add firebase performance sdk in your parent app</b></a> (Optional)
+8)  <a href="https://firebase.google.com/docs/perf-mon/get-started-android" ><b>Add firebase performance sdk in your parent app</b></a> (Optional)
 
 ## Custom Views
 [(Back to top)](#table-of-contents)
@@ -190,6 +190,7 @@ A news feed sdk to seamlessly integrate news in your application
 
 - [Ads](#ads)
 - [Search Sticky Bar](#search-sticky-bar)
+- [Pluto SDK](#pluto-sdk)
 
 ### Ads
 [(Back to top)](#features)
@@ -357,7 +358,19 @@ A news feed sdk to seamlessly integrate news in your application
    ```java
    startActivity(new Intent(this, SettingsActivity.class));
    ```
+### Pluto SDK
+[(Back to top)](#features)
 
+If your parent app has pluto sdk then add the following lines before intialiazing the sdk to get the newtork logs of feedsdk in pluto.
+
+   ***Kotlin***
+   ```kotlin
+   FeedSdk.hasPluto = true
+   ```
+   ***Java***
+   ```java
+   FeedSdk.Companion.setHasPluto(true);
+   ```
 
 ## Handle Notifications & Dynamic Links
 
@@ -680,27 +693,8 @@ A news feed sdk to seamlessly integrate news in your application
         "category": "quick_bites",
         "title": "Krissh 3",
         "push_source":"feedsdk",
-        "post_source": "trending",
-        "feed_type": "video_push",
-        "post_id": "9gag_a41bZ8y",
-        "message": "See hritiks best action super hero movie only on liveTv",
-        "image": "https://img.youtube.com/vi/1N_zzi2ad04/hqdefault.jpg"
-    }
-}
-```
-### Payload to open reels Page
-
-```groovy
-{
-    "to" : "/topics/Debug",
-    "collapse_key" : "type_a",
-    "data": {
-        "page": "SDK://reels",
-        "category": "quick_bites",
-        "title": "Krissh 3",
-        "push_source":"feedsdk",
-        "post_source": "trending",
-        "feed_type": "video_push",
+        "post_source": "video_push",
+        "feed_type": "push",
         "post_id": "9gag_a41bZ8y",
         "message": "See hritiks best action super hero movie only on liveTv",
         "image": "https://img.youtube.com/vi/1N_zzi2ad04/hqdefault.jpg"
