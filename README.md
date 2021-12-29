@@ -37,7 +37,7 @@ A news feed sdk to seamlessly integrate news in your application
     ```groovy
 
 	dependencies {
-	    implementation 'com.github.Appyhigh:news-feed-sdk:1.0.4.9'
+	    implementation 'com.github.Appyhigh:news-feed-sdk:1.0.4.10'
 	    // ...
 	}
     ```
@@ -388,7 +388,7 @@ To add languages directly from parent app, use `setLanguagesForFeedSDK(languages
 #### Add language for `getfeeds` api call from parent app.
 To add language directly for api call from parent app, use `setLanguageForAPICalls(languages:String)`
 
- `languages` param should be a string of interest id with "," seperated.
+ `languages` param should be a string oflanguage codes with "," seperated.
  
 ***Kotlin***
    ```kotlin
@@ -398,7 +398,20 @@ To add language directly for api call from parent app, use `setLanguageForAPICal
    ```java
    new FeedSdk().setLanguageForAPICalls("en,hi");
    ```
+#### Add interests for `getfeeds` api call from parent app.
+To add interests directly for api call from parent app, use `setInterestsForAPICalls(interests:String)`
 
+ `interests` param should be a string of interest id with "," seperated.
+ 
+***Kotlin***
+   ```kotlin
+   FeedSdk().setInterestsForAPICalls("cricket,sports")
+   ```
+   ***Java***
+   ```java
+   new FeedSdk().setInterestsForAPICalls("cricket,sports");
+   ```
+   
 ## Handle Notifications & Dynamic Links
 
 [(Back to top)](#table-of-contents)
