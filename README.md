@@ -30,7 +30,7 @@ A news feed sdk to seamlessly integrate news in your application
 	    }
 	 }
     ```
-3)  Add the library to your app `build.gradle` file.[![Release](https://jitpack.io/v/Appyhigh/news-feed-sdk.svg)](https://jitpack.io/#Appyhigh/news-feed-sdk)
+3)  Add the library to your app `build.gradle` file.
 
     In your  `build.gradle`:
 
