@@ -37,10 +37,11 @@ A news feed sdk to seamlessly integrate news in your application
     ```groovy
 
 	dependencies {
-	    implementation 'com.github.Appyhigh:news-feed-sdk:[![Release](https://jitpack.io/v/#Appyhigh/news-feed-sdk.svg)](https://jitpack.io/#Appyhigh/news-feed-sdk)'
+	    implementation 'com.github.Appyhigh:news-feed-sdk:1.0.4.13'
 	    // ...
 	}
     ```
+    [![Release](https://jitpack.io/v/#Appyhigh/news-feed-sdk.svg)](https://jitpack.io/#Appyhigh/news-feed-sdk)
 4)  Add the following metadata inside your `application` tag in your `AndroidManifest.xml`
 
     ```xml
