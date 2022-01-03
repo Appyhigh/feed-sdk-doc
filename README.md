@@ -80,7 +80,7 @@ A news feed sdk to seamlessly integrate news in your application
             android:name="is_location_already_asked"
             android:value="false" />
     ```
-5)  Inititalize SDK(Recommended to initialize in Splash or Main Activity)
+5)  Inititalize SDK(Recommended to initialize in Splash and Main Activity)
 
     initializeSdk(context: Context, lifecycle: Lifecycle, versionCode:String, versionName:String user: User? = null, showCricketNotification:Boolean?=true)
 
