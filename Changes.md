@@ -2,6 +2,20 @@
 
       | SDK Name         | Lib Version  | SDK Version Code |
       |------------------|--------------|------------------|
+      | newsfeedsdk      |    1.0.5     |      1007        |
+
+#### Changes:
+1. Added cricket pwa for match detail screen with caching feature.
+2. Added handling the 'link' param(pwa) for dynamic links to open match detail screen.
+3. Added feeds in search intermediate page with analytics and new design.
+4. Added close button in search sticky bar.
+5. Added covid card in for_you tab.
+6. Added toast message to show "No Internet Connection".
+
+----------------------------------------------------------------------------------------------------------------------------
+
+      | SDK Name         | Lib Version  | SDK Version Code |
+      |------------------|--------------|------------------|
       | newsfeedsdk      |    1.0.17    |      1007        |
 
 #### Changes:
