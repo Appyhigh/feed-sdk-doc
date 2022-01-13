@@ -515,11 +515,11 @@ To add interests directly for api call from parent app, use `setInterestsForAPIC
                               podcast_id = deepLink.getQueryParameter("podcast_id")!!
                           }
                           if (deepLink!!.getQueryParameter("filename") != null 
-			  && deepLink.getQueryParameter("matchType") != null
-			  && deepLink.getQueryParameter("pwa") != null) {
-                              filename = deepLink.getQueryParameter("filename")!!
-                              matchType = deepLink.getQueryParameter("matchType")!!
-			      pwa = deepLink.getQueryParameter("pwa")!!
+				  && deepLink.getQueryParameter("matchType") != null
+				  && deepLink.getQueryParameter("pwa") != null) {
+				      filename = deepLink.getQueryParameter("filename")!!
+				      matchType = deepLink.getQueryParameter("matchType")!!
+			      	      pwa = deepLink.getQueryParameter("pwa")!!
                           }
                           if (deepLink.getQueryParameter("matchesMode") != null) {
                                matchesMode = deepLink.getQueryParameter("matchesMode")!!
@@ -551,11 +551,11 @@ To add interests directly for api call from parent app, use `setInterestsForAPIC
                                post_id = deepLink.getQueryParameter("feed_id");
                            }
                            if (deepLink.getQueryParameter("filename") != null 
-			   && deepLink.getQueryParameter("matchType") != null
-			   && deepLink.getQueryParameter("pwa") != null) {
-                               filename = deepLink.getQueryParameter("filename");
-                               matchType = deepLink.getQueryParameter("matchType");
-			       pwa = deepLink.getQueryParameter("pwa");
+				   && deepLink.getQueryParameter("matchType") != null
+				   && deepLink.getQueryParameter("pwa") != null) {
+				       filename = deepLink.getQueryParameter("filename");
+				       matchType = deepLink.getQueryParameter("matchType");
+				       pwa = deepLink.getQueryParameter("pwa");
                            }
                            if (deepLink.getQueryParameter("podcast_id") != null) {
                                podcast_id = deepLink.getQueryParameter("podcast_id");
@@ -580,9 +580,9 @@ To add interests directly for api call from parent app, use `setInterestsForAPIC
        if(post_id.isNotEmpty()) intent.putExtra("post_id", post_id)
        if(podcast_id.isNotEmpty()) intent.putExtra("podcast_id",podcast_id)
        if(filename.isNotEmpty() && matchType.isNotEmpty() && pwa.isNotEmpty()){
-           intent.putExtra("filename", filename)
-           intent.putExtra("matchType", matchType)
-	   intent.putExtra("link", pwa)
+		   intent.putExtra("filename", filename)
+		   intent.putExtra("matchType", matchType)
+		   intent.putExtra("link", pwa)
        }
        if(matchesMode.isNotEmpty()) intent.putExtra("matchesMode", matchesMode)
        // ...
@@ -599,9 +599,9 @@ To add interests directly for api call from parent app, use `setInterestsForAPIC
        if (!post_id.isEmpty())
            intent.putExtra("post_id", post_id);
        if (!filename.isEmpty() && !matchType.isEmpty() && !pwa.isEmpty()) {
-           intent.putExtra("filename", filename);
-           intent.putExtra("matchType", matchType);
-	   intent.putExtra("link", pwa);
+		   intent.putExtra("filename", filename);
+		   intent.putExtra("matchType", matchType);
+		   intent.putExtra("link", pwa);
        }
        if (!podcast_id.isEmpty())
            intent.putExtra("podcast_id", podcast_id);
