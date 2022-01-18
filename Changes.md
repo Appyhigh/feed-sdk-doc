@@ -2,6 +2,17 @@
 
       | SDK Name         | Lib Version  | SDK Version Code |
       |------------------|--------------|------------------|
+      | newsfeedsdk      |    task/exp  |      1007        |
+
+#### Changes:
+1. Changed podcast card UI
+2. Added handling duration from different formats to hh:mm:ss format in podcasts
+3. Changed player height for short video with black bg
+
+----------------------------------------------------------------------------------------------------------------------------
+
+      | SDK Name         | Lib Version  | SDK Version Code |
+      |------------------|--------------|------------------|
       | newsfeedsdk      |    1.0.5     |      1007        |
 
 #### Changes:
