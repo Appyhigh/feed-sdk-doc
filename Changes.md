@@ -2,7 +2,7 @@
 
       | SDK Name         | Lib Version  | SDK Version Code |
       |------------------|--------------|------------------|
-      | newsfeedsdk      |    task/exp  |      1007        |
+      | newsfeedsdk      |    1.0.5.1   |      1007        |
 
 #### Changes:
 1. Changed podcast card UI
