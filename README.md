@@ -103,8 +103,24 @@ A news feed sdk to seamlessly integrate news in your application
      }
     ```
 
-6)  [**Handle Notifications & Dynamic Links**](#handle-notifications--dynamic-links)
-7)  <a href="https://firebase.google.com/docs/perf-mon/get-started-android" ><b>Add firebase performance sdk in your parent app</b></a> (Optional)
+6) If you have enabled progaurd in your app then add the following lines in the prograurd rules
+```grrovy
+    
+	# FeedSDK
+	-keepclassmembers enum * { *; }
+	-keepclassmembers class com.appyhigh.newsfeedsdk.apicalls.**{
+	    <fields>;
+	    <init>();
+	    <methods>;
+	}
+	-keepclassmembers class com.appyhigh.newsfeedsdk.model.** {
+	    <fields>;
+	    <init>();
+	    <methods>;
+	}
+   ```
+7)  [**Handle Notifications & Dynamic Links**](#handle-notifications--dynamic-links)
+8)  <a href="https://firebase.google.com/docs/perf-mon/get-started-android" ><b>Add firebase performance sdk in your parent app</b></a> (Optional)
 
 ## Custom Views
 [(Back to top)](#table-of-contents)
