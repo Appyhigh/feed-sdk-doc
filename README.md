@@ -694,6 +694,7 @@ To add interests directly for api call from parent app, use `setInterestsForAPIC
         "message": "Ravi Bishnoi Gives PBKS Breakthrough. Catch LIVE Action",
         "image": "https://cricketimage.blob.core.windows.net/notifications/1st-Wicket_2021-09-28T21:45:02.616851+05:30.png",
         "filename": "mikp09282021204181",
+	"link":"https://masterfeed.io/cricket/match/mikp09282021204181",
         "launchType": "cricket",
         "post_source": "ipl_push"
     }
