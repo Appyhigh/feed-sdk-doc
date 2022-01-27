@@ -2,6 +2,16 @@
 
       | SDK Name         | Lib Version  | SDK Version Code |
       |------------------|--------------|------------------|
+      | newsfeedsdk      |    1.0.5.2   |      1007        |
+
+#### Changes:
+1. Fixed issues from 1.0.5.1
+2. Added function `setShowFeedAdFirst()` to show/hide ads at first position in feeds.
+
+----------------------------------------------------------------------------------------------------------------------------
+
+      | SDK Name         | Lib Version  | SDK Version Code |
+      |------------------|--------------|------------------|
       | newsfeedsdk      |    1.0.5.1   |      1007        |
 
 #### Changes:
