@@ -6,7 +6,7 @@
 
 #### Changes:
 1. Fixed issues from 1.0.5.2
-2. Added ad refresh rate functionality (By default refresh rate is 60s, To change this, add `feed_native_ad_interval` in your remote config.
+2. Added ad refresh rate functionality (By default refresh rate is 60s. To change this, add `feed_native_ad_interval` in your remote config.
 3. Add google/bing icon in search bar in search intermediate page.
 4. Added backend tracking for search queries search intermediate page.
 5. Added crypto price alerts functionality.
