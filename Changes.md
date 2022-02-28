@@ -2,6 +2,21 @@
 
       | SDK Name         | Lib Version  | SDK Version Code |
       |------------------|--------------|------------------|
+      | newsfeedsdk      |    1.0.6     |      1007        |
+
+#### Changes:
+1. Fixed issues from 1.0.5.2
+2. Added ad refresh rate functionality (By default refresh rate is 60s, To change this, add `feed_native_ad_interval` in your remote config.
+3. Add google/bing icon in search bar in search intermediate page.
+4. Added backend tracking for search queries search intermediate page.
+5. Added crypto price alerts functionality.
+6. Added font change functionality (Use `applyFont(context: Context, fontName: String)` to change the font from parent app).
+7. Added share functionality for covid card.
+
+----------------------------------------------------------------------------------------------------------------------------
+
+      | SDK Name         | Lib Version  | SDK Version Code |
+      |------------------|--------------|------------------|
       | newsfeedsdk      |    1.0.5.2   |      1007        |
 
 #### Changes:
