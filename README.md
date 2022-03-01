@@ -530,6 +530,9 @@ To add interests directly for api call from parent app, use `setInterestsForAPIC
                           if (deepLink!!.getQueryParameter("podcast_id") != null) {
                               podcast_id = deepLink.getQueryParameter("podcast_id")!!
                           }
+			  if (deepLink!!.getQueryParameter("covid_card") != null) {
+                              covid_card = deepLink.getQueryParameter("covid_card")!!
+                          }
                           if (deepLink!!.getQueryParameter("filename") != null 
 				  && deepLink.getQueryParameter("matchType") != null
 				  && deepLink.getQueryParameter("pwa") != null) {
@@ -576,6 +579,9 @@ To add interests directly for api call from parent app, use `setInterestsForAPIC
                            if (deepLink.getQueryParameter("podcast_id") != null) {
                                podcast_id = deepLink.getQueryParameter("podcast_id");
                            }
+			   if (deepLink.getQueryParameter("covid_card") != null) {
+                              covid_card = deepLink.getQueryParameter("covid_card");
+                           }
                            if (deepLink.getQueryParameter("matchesMode") != null) {
                                 matchesMode = deepLink.getQueryParameter("matchesMode");
                            }
@@ -595,6 +601,7 @@ To add interests directly for api call from parent app, use `setInterestsForAPIC
    ```kotlin
        if(post_id.isNotEmpty()) intent.putExtra("post_id", post_id)
        if(podcast_id.isNotEmpty()) intent.putExtra("podcast_id",podcast_id)
+       if(covid_card.isNotEmpty()) intent.putExtra("covid_card",covid_card)
        if(filename.isNotEmpty() && matchType.isNotEmpty() && pwa.isNotEmpty()){
 		   intent.putExtra("filename", filename)
 		   intent.putExtra("matchType", matchType)
@@ -621,6 +628,8 @@ To add interests directly for api call from parent app, use `setInterestsForAPIC
        }
        if (!podcast_id.isEmpty())
            intent.putExtra("podcast_id", podcast_id);
+       if (!covid_card.isEmpty())
+	   intent.putExtra("covid_card", covid_card);
        if(!matchesMode.isEmpty())
            intent.putExtra("matchesMode", matchesMode);
        // ...
