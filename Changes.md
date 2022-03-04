@@ -2,6 +2,18 @@
 
       | SDK Name         | Lib Version  | SDK Version Code |
       |------------------|--------------|------------------|
+      | newsfeedsdk      |    1.0.6.1     |      1007        |
+
+#### Changes:
+1. Fixed Ad timer issue from 1.0.6v.
+2. Fixed comment and like issue for guests from 1.0.6v.
+3. Added analytics for news and videos in search sticky bar.
+4. Added uniform height for feature images and blur background for image cards.
+
+----------------------------------------------------------------------------------------------------------------------------
+
+      | SDK Name         | Lib Version  | SDK Version Code |
+      |------------------|--------------|------------------|
       | newsfeedsdk      |    1.0.6     |      1007        |
 
 #### Changes:
