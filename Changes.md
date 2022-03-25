@@ -2,7 +2,7 @@
 
       | SDK Name         | Lib Version  | SDK Version Code |
       |------------------|--------------|------------------|
-      | newsfeedsdk      |    1.0.7     |      1007        |
+      | newsfeedsdk      |    1.0.7.1   |      1007        |
 
 #### Changes:
 1. Added Cricket PWA's with listeners.
