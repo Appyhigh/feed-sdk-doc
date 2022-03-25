@@ -2,6 +2,20 @@
 
       | SDK Name         | Lib Version  | SDK Version Code |
       |------------------|--------------|------------------|
+      | newsfeedsdk      |    1.0.7     |      1007        |
+
+#### Changes:
+1. Added Cricket PWA's with listeners.
+2. Updated login flow.
+3. Add cricket notifications switch in settings screen.
+4. Fixed podcast scroll issue in feeds
+5. Updated platform images in feeds
+6. Fixed fpj image issue in post native detail screen.
+
+----------------------------------------------------------------------------------------------------------------------------
+
+      | SDK Name         | Lib Version  | SDK Version Code |
+      |------------------|--------------|------------------|
       | newsfeedsdk      |    1.0.6.2   |      1007        |
 
 #### Changes:
