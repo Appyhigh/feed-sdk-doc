@@ -2,6 +2,17 @@
 
       | SDK Name         | Lib Version  | SDK Version Code |
       |------------------|--------------|------------------|
+      | newsfeedsdk      |    1.0.7.4   |      1007        |
+
+#### Changes:
+1. Fixed username duplication in update-user api.
+2. Fixed ads issue in post detail native page.
+3. Fixed refresh issue for cricket home after changing languages or interests.
+
+----------------------------------------------------------------------------------------------------------------------------
+
+      | SDK Name         | Lib Version  | SDK Version Code |
+      |------------------|--------------|------------------|
       | newsfeedsdk      |    1.0.7.3   |      1007        |
 
 #### Changes:
