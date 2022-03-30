@@ -2,11 +2,12 @@
 
       | SDK Name         | Lib Version  | SDK Version Code |
       |------------------|--------------|------------------|
-      | newsfeedsdk      |    1.0.7.2   |      1007        |
+      | newsfeedsdk      |    1.0.7.3   |      1007        |
 
 #### Changes:
 1. Fixed application error issue in cricket home screen.
 2. Fixed backpress functionality for webviews.
+3. Fixed issues from 1.0.7.1v & 1.0.7.2v
 
 ----------------------------------------------------------------------------------------------------------------------------
 
