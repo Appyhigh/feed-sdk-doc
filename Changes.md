@@ -2,7 +2,7 @@
 
       | SDK Name         | Lib Version  | SDK Version Code |
       |------------------|--------------|------------------|
-      | newsfeedsdk      |    1.0.7.4   |      1007        |
+      | newsfeedsdk      |    1.0.7.5   |      1007        |
 
 #### Changes:
 1. Fixed username duplication in update-user api.
