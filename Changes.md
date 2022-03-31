@@ -2,6 +2,15 @@
 
       | SDK Name         | Lib Version  | SDK Version Code |
       |------------------|--------------|------------------|
+      | newsfeedsdk      |    1.0.7.6   |      1007        |
+
+#### Changes:
+1. Added nativePageAdBreaker in native detail page.
+
+----------------------------------------------------------------------------------------------------------------------------
+
+      | SDK Name         | Lib Version  | SDK Version Code |
+      |------------------|--------------|------------------|
       | newsfeedsdk      |    1.0.7.5   |      1007        |
 
 #### Changes:
