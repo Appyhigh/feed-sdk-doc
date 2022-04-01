@@ -2,11 +2,12 @@
 
       | SDK Name         | Lib Version  | SDK Version Code |
       |------------------|--------------|------------------|
-      | newsfeedsdk      |    1.0.7.7   |      1007        |
+      | newsfeedsdk      |    1.0.7.8   |      1007        |
 
 #### Changes:
 1. Added nativePageAdBreaker in native detail page.
 2. Added app-wise interest order in feeds.
+3. Added is_native=true for links in native detail page.
 
 ----------------------------------------------------------------------------------------------------------------------------
 
