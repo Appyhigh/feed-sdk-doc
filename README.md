@@ -524,30 +524,31 @@ To add interests directly for api call from parent app, use `setInterestsForAPIC
                   if (pendingDynamicLinkData != null) {
                       deepLink = pendingDynamicLinkData.link
                       try {
-                          if (deepLink!!.getQueryParameter("feed_id") != null) {
-			  	if(deepLink!!.getQueryParameter("is_native")!=null){
-                                   isNative = true
-                              	}
-                              	post_id= pendingDynamicLinkData.link?.getQueryParameter("feed_id")!!
-                          }
-                          if (deepLink!!.getQueryParameter("podcast_id") != null) {
-                              podcast_id = deepLink.getQueryParameter("podcast_id")!!
-                          }
-			  if (deepLink!!.getQueryParameter("covid_card") != null) {
-                              covid_card = deepLink.getQueryParameter("covid_card")!!
-                          }
-                          if (deepLink!!.getQueryParameter("filename") != null 
-				  && deepLink.getQueryParameter("matchType") != null
-				  && deepLink.getQueryParameter("pwa") != null) {
-				      filename = deepLink.getQueryParameter("filename")!!
-				      matchType = deepLink.getQueryParameter("matchType")!!
-			      	      pwa = deepLink.getQueryParameter("pwa")!!
-                          }
-                          if (deepLink.getQueryParameter("matchesMode") != null) {
-                               matchesMode = deepLink.getQueryParameter("matchesMode")!!
-                          }
-                      } catch (ex:Exception){}
-                      fetchDynamicData.onFetchSuccess()
+		      		  if (deepLink!!.getQueryParameter("feed_id") != null) {
+					if(deepLink!!.getQueryParameter("is_native")!=null){
+					   isNative = true
+					}
+					post_id= pendingDynamicLinkData.link?.getQueryParameter("feed_id")!!
+				  }
+				  if (deepLink!!.getQueryParameter("podcast_id") != null) {
+				      podcast_id = deepLink.getQueryParameter("podcast_id")!!
+				  }
+				  if (deepLink!!.getQueryParameter("covid_card") != null) {
+				      covid_card = deepLink.getQueryParameter("covid_card")!!
+				  }
+				  if (deepLink!!.getQueryParameter("filename") != null 
+					  && deepLink.getQueryParameter("matchType") != null
+					  && deepLink.getQueryParameter("pwa") != null) {
+					      filename = deepLink.getQueryParameter("filename")!!
+					      matchType = deepLink.getQueryParameter("matchType")!!
+					      pwa = deepLink.getQueryParameter("pwa")!!
+				  }
+				  if (deepLink.getQueryParameter("matchesMode") != null) {
+				       matchesMode = deepLink.getQueryParameter("matchesMode")!!
+				  }
+
+			      } catch (ex:Exception){}
+			      fetchDynamicData.onFetchSuccess()
                   }else{
                       fetchDynamicData.onFetchSuccess()
                   }
@@ -568,29 +569,29 @@ To add interests directly for api call from parent app, use `setInterestsForAPIC
                    public void onSuccess(PendingDynamicLinkData pendingDynamicLinkData) {
                        Uri deepLink = null;
                        if (pendingDynamicLinkData != null) {
-                           deepLink = pendingDynamicLinkData.getLink();
-                           if(deepLink.getQueryParameter("feed_id") != null) {
-			   	if(deepLink.getQueryParameter("is_native")!=null){
-                                   isNative = true
-                               }
-                               post_id = deepLink.getQueryParameter("feed_id");
-                           }
-                           if (deepLink.getQueryParameter("filename") != null 
-				   && deepLink.getQueryParameter("matchType") != null
-				   && deepLink.getQueryParameter("pwa") != null) {
-				       filename = deepLink.getQueryParameter("filename");
-				       matchType = deepLink.getQueryParameter("matchType");
-				       pwa = deepLink.getQueryParameter("pwa");
-                           }
-                           if (deepLink.getQueryParameter("podcast_id") != null) {
-                               podcast_id = deepLink.getQueryParameter("podcast_id");
-                           }
-			   if (deepLink.getQueryParameter("covid_card") != null) {
-                              covid_card = deepLink.getQueryParameter("covid_card");
-                           }
-                           if (deepLink.getQueryParameter("matchesMode") != null) {
-                                matchesMode = deepLink.getQueryParameter("matchesMode");
-                           }
+                                deepLink = pendingDynamicLinkData.getLink();
+		       		if(deepLink.getQueryParameter("feed_id") != null) {
+					if(deepLink.getQueryParameter("is_native")!=null){
+						isNative = true
+					}
+				       post_id = deepLink.getQueryParameter("feed_id");
+				}
+				if (deepLink.getQueryParameter("filename") != null 
+					&& deepLink.getQueryParameter("matchType") != null
+					&& deepLink.getQueryParameter("pwa") != null) {
+					filename = deepLink.getQueryParameter("filename");
+					matchType = deepLink.getQueryParameter("matchType");
+					pwa = deepLink.getQueryParameter("pwa");
+				}
+                           	if (deepLink.getQueryParameter("podcast_id") != null) {
+                                	podcast_id = deepLink.getQueryParameter("podcast_id");
+                           	}
+			   	if (deepLink.getQueryParameter("covid_card") != null) {
+                              		covid_card = deepLink.getQueryParameter("covid_card");
+                           	}
+                           	if (deepLink.getQueryParameter("matchesMode") != null) {
+                                	matchesMode = deepLink.getQueryParameter("matchesMode");
+                           	}
                        }
                    }
                })
