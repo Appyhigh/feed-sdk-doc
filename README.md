@@ -37,7 +37,7 @@ A news feed sdk to seamlessly integrate news in your application
     ```groovy
 
 	dependencies {
-	    implementation 'com.github.Appyhigh:news-feed-sdk:1.0.7.6'
+	    implementation 'com.github.Appyhigh:news-feed-sdk:1.0.7.7'
 	    // ...
 	}
     ```
@@ -511,7 +511,7 @@ To add interests directly for api call from parent app, use `setInterestsForAPIC
 
 [(Back to top)](#handle-notifications--dynamic-links)
 
-1) Fetch and check the params("feed_id","podcast_id","filename","matchType","pwa","matchesMode") from firebase dynamic link.
+1) Fetch and check the params("feed_id","is_native","podcast_id","filename","matchType","pwa","matchesMode") from firebase dynamic link.
 
    ***Kotlin***
    ```kotlin
@@ -525,7 +525,10 @@ To add interests directly for api call from parent app, use `setInterestsForAPIC
                       deepLink = pendingDynamicLinkData.link
                       try {
                           if (deepLink!!.getQueryParameter("feed_id") != null) {
-                              post_id= pendingDynamicLinkData.link?.getQueryParameter("feed_id")!!
+			  	if(deepLink!!.getQueryParameter("is_native")!=null){
+                                   isNative = true
+                              	}
+                              	post_id= pendingDynamicLinkData.link?.getQueryParameter("feed_id")!!
                           }
                           if (deepLink!!.getQueryParameter("podcast_id") != null) {
                               podcast_id = deepLink.getQueryParameter("podcast_id")!!
@@ -567,6 +570,9 @@ To add interests directly for api call from parent app, use `setInterestsForAPIC
                        if (pendingDynamicLinkData != null) {
                            deepLink = pendingDynamicLinkData.getLink();
                            if(deepLink.getQueryParameter("feed_id") != null) {
+			   	if(deepLink.getQueryParameter("is_native")!=null){
+                                   isNative = true
+                               }
                                post_id = deepLink.getQueryParameter("feed_id");
                            }
                            if (deepLink.getQueryParameter("filename") != null 
@@ -600,6 +606,7 @@ To add interests directly for api call from parent app, use `setInterestsForAPIC
    ***Kotlin***
    ```kotlin
        if(post_id.isNotEmpty()) intent.putExtra("post_id", post_id)
+       if(isNative) intent.putExtra("is_native", "true")
        if(podcast_id.isNotEmpty()) intent.putExtra("podcast_id",podcast_id)
        if(covid_card.isNotEmpty()) intent.putExtra("covid_card",covid_card)
        if(filename.isNotEmpty() && matchType.isNotEmpty() && pwa.isNotEmpty()){
@@ -621,6 +628,7 @@ To add interests directly for api call from parent app, use `setInterestsForAPIC
    ```java
        if (!post_id.isEmpty())
            intent.putExtra("post_id", post_id);
+       if(isNative) intent.putExtra("is_native", "true");
        if (!filename.isEmpty() && !matchType.isEmpty() && !pwa.isEmpty()) {
 		   intent.putExtra("filename", filename);
 		   intent.putExtra("matchType", matchType);
