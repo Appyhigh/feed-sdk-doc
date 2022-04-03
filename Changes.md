@@ -2,6 +2,15 @@
 
       | SDK Name         | Lib Version  | SDK Version Code |
       |------------------|--------------|------------------|
+      | newsfeedsdk      |    1.0.7.9   |      1007        |
+
+#### Changes:
+1.Fixed onBackPress issue on MatchScoreDetail page
+
+----------------------------------------------------------------------------------------------------------------------------
+
+      | SDK Name         | Lib Version  | SDK Version Code |
+      |------------------|--------------|------------------|
       | newsfeedsdk      |    1.0.7.8   |      1007        |
 
 #### Changes:
