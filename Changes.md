@@ -2,12 +2,16 @@
 
       | SDK Name         | Lib Version  | SDK Version Code |
       |------------------|--------------|------------------|
-      | newsfeedsdk      |    1.0.8.0   |      1007        |
+      | newsfeedsdk      |    1.0.8.3   |      1007        |
 
 #### Changes:
-1. Added PWA ad click fix
-2. Added impression timer task and work manager to upload impressions periodically
-3. Added caching for get feeds api
+1. Added PWA ad click fix.
+2. Added impression timer task and work manager to upload impressions periodically.
+3. Added caching for get feeds api.
+4. Added performance functions for native detail page.
+5. Added mute on for videos on app open.
+6. Fixed tab selected issue in feeds.
+7. Fixed interests param issues for getfeeds in for_you.
 
 ----------------------------------------------------------------------------------------------------------------------------
 
@@ -16,7 +20,7 @@
       | newsfeedsdk      |    1.0.7.9   |      1007        |
 
 #### Changes:
-1.Fixed onBackPress issue on MatchScoreDetail page
+1.Fixed onBackPress issue on MatchScoreDetail page.
 
 ----------------------------------------------------------------------------------------------------------------------------
 
