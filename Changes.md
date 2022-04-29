@@ -2,6 +2,20 @@
 
       | SDK Name         | Lib Version  | SDK Version Code |
       |------------------|--------------|------------------|
+      | newsfeedsdk      |    1.0.8.4   |      1007        |
+
+#### Changes:
+1. Added webview implementation for description in native post detail page.
+2. Fixed bold style issue for textviews in feedsdk.
+3. Added new native template for feedsdk notifications.
+4. Fixed tab redirection issue related to first post id notification type.
+5. Removed paper lib implementation for feeds caching.
+
+
+----------------------------------------------------------------------------------------------------------------------------
+
+      | SDK Name         | Lib Version  | SDK Version Code |
+      |------------------|--------------|------------------|
       | newsfeedsdk      |    1.0.8.3   |      1007        |
 
 #### Changes:
