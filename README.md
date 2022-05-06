@@ -37,7 +37,7 @@ A news feed sdk to seamlessly integrate news in your application
     ```groovy
 
 	dependencies {
-	    implementation 'com.github.Appyhigh:news-feed-sdk:1.0.8.4'
+	    implementation 'com.github.Appyhigh:news-feed-sdk:1.0.8.5'
 	    // ...
 	}
     ```
@@ -229,9 +229,12 @@ A news feed sdk to seamlessly integrate news in your application
             getString(R.string.ad_unit_commentary),
             getString(R.string.ad_unit_finished_match),
             getString(R.string.ad_unit_between_article),
+            getString(R.string.ad_unit_between_article_fallback),
             getString(R.string.ad_unit_article_end),
+            getString(R.string.ad_unit_article_end_fallback),
             getString(R.string.ad_post_interstitial),
-            getString(R.string.search_footer_banner)
+            getString(R.string.search_footer_banner),
+            getString(R.string.search_footer_banner_intermediate)
         )
         FeedSdk().setAdsModel(adsModel)
         // ...
@@ -244,18 +247,21 @@ A news feed sdk to seamlessly integrate news in your application
          // all the ad ids should be native ad units except search_footer_banner(banner ad unit)
          // ...
           AdsModel adsModel = new AdsModel(
-                getString(R.string.ad_unit_feed_native),
-                getString(R.string.ad_unit_video_ad_native),
-                getString(R.string.ad_unit_team_ranking),
-                getString(R.string.ad_unit_player_ranking),
-                getString(R.string.ad_unit_live_score),
-                getString(R.string.ad_unit_scorecard),
-                getString(R.string.ad_unit_commentary),
-                getString(R.string.ad_unit_finished_match),
-                getString(R.string.ad_unit_between_article),
-	        getString(R.string.ad_unit_article_end),
-	        getString(R.string.ad_post_interstitial),
-	        getString(R.string.search_footer_banner)
+            getString(R.string.ad_unit_feed_native),
+            getString(R.string.ad_unit_video_ad_native),
+            getString(R.string.ad_unit_team_ranking),
+            getString(R.string.ad_unit_player_ranking),
+            getString(R.string.ad_unit_live_score),
+            getString(R.string.ad_unit_scorecard),
+            getString(R.string.ad_unit_commentary),
+            getString(R.string.ad_unit_finished_match),
+            getString(R.string.ad_unit_between_article),
+            getString(R.string.ad_unit_between_article_fallback),
+            getString(R.string.ad_unit_article_end),
+            getString(R.string.ad_unit_article_end_fallback),
+            getString(R.string.ad_post_interstitial),
+            getString(R.string.search_footer_banner),
+            getString(R.string.search_footer_banner_intermediate)
         );        
         FeedSdk.Companion.setMAdsModel(adsModel);
         // ...
