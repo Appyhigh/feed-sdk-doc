@@ -2,6 +2,18 @@
 
       | SDK Name         | Lib Version  | SDK Version Code |
       |------------------|--------------|------------------|
+      | newsfeedsdk      |    1.0.8.5   |      1007        |
+
+#### Changes:
+1. Fixed ad timer handling and added fallback for native ads in nativeDetailPage
+2. Added Firebase events for ads in nativeDetailPage.
+3. Fixed opening publish page again if it is already opened.
+4. Added new implementation for caching.
+
+----------------------------------------------------------------------------------------------------------------------------
+
+      | SDK Name         | Lib Version  | SDK Version Code |
+      |------------------|--------------|------------------|
       | newsfeedsdk      |    1.0.8.4   |      1007        |
 
 #### Changes:
