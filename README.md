@@ -37,7 +37,7 @@ A news feed sdk to seamlessly integrate news in your application
     ```groovy
 
 	dependencies {
-	    implementation 'com.github.Appyhigh:news-feed-sdk:1.0.8.5'
+	    implementation 'com.github.Appyhigh:news-feed-sdk:1.0.8.6'
 	    // ...
 	}
     ```
@@ -218,7 +218,7 @@ A news feed sdk to seamlessly integrate news in your application
     private fun initFeedSDK() {
          FeedSdk().initializeSdk(this, lifecycle, user, showCricketNotification) //user can be null also
          // ...
-         // all the ad ids should be native ad units except search_footer_banner(banner ad unit)
+         // all the ad ids should be native ad units except search_footer_banner_intermediate, native_footer_banner, ad_post_interstitial
          val adsModel = AdsModel(
             getString(R.string.ad_unit_feed_native),
             getString(R.string.ad_unit_video_ad_native),
@@ -228,13 +228,13 @@ A news feed sdk to seamlessly integrate news in your application
             getString(R.string.ad_unit_scorecard),
             getString(R.string.ad_unit_commentary),
             getString(R.string.ad_unit_finished_match),
+            getString(R.string.search_footer_banner_intermediate),
             getString(R.string.ad_unit_between_article),
-            getString(R.string.ad_unit_between_article_fallback),
+            getString(R.string.ad_id_between_article_native_fallback),
             getString(R.string.ad_unit_article_end),
-            getString(R.string.ad_unit_article_end_fallback),
+            getString(R.string.ad_id_article_end_native_fallback),
             getString(R.string.ad_post_interstitial),
-            getString(R.string.search_footer_banner),
-            getString(R.string.search_footer_banner_intermediate)
+            getString(R.string.native_footer_banner)
         )
         FeedSdk().setAdsModel(adsModel)
         // ...
@@ -244,7 +244,7 @@ A news feed sdk to seamlessly integrate news in your application
     ```java
     void initFeedSDK(){
          new FeedSdk().initializeSdk(this, getLifecycle(), user, showCricketNotification); //user can be null also
-         // all the ad ids should be native ad units except search_footer_banner(banner ad unit)
+         // all the ad ids should be native ad units except search_footer_banner_intermediate, native_footer_banner, ad_post_interstitial
          // ...
           AdsModel adsModel = new AdsModel(
             getString(R.string.ad_unit_feed_native),
@@ -255,13 +255,13 @@ A news feed sdk to seamlessly integrate news in your application
             getString(R.string.ad_unit_scorecard),
             getString(R.string.ad_unit_commentary),
             getString(R.string.ad_unit_finished_match),
+            getString(R.string.search_footer_banner_intermediate),
             getString(R.string.ad_unit_between_article),
-            getString(R.string.ad_unit_between_article_fallback),
+            getString(R.string.ad_id_between_article_native_fallback),
             getString(R.string.ad_unit_article_end),
-            getString(R.string.ad_unit_article_end_fallback),
+            getString(R.string.ad_id_article_end_native_fallback),
             getString(R.string.ad_post_interstitial),
-            getString(R.string.search_footer_banner),
-            getString(R.string.search_footer_banner_intermediate)
+            getString(R.string.native_footer_banner)
         );        
         FeedSdk.Companion.setMAdsModel(adsModel);
         // ...
