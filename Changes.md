@@ -2,7 +2,7 @@
 
       | SDK Name         | Lib Version  | SDK Version Code |
       |------------------|--------------|------------------|
-      | newsfeedsdk      |    1.0.8.5   |      1007        |
+      | newsfeedsdk      |    1.0.8.6   |      1007        |
 
 #### Changes:
 1. Fixed ad timer handling and added fallback for native ads in nativeDetailPage
