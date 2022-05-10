@@ -2,7 +2,7 @@
 
       | SDK Name         | Lib Version  | SDK Version Code |
       |------------------|--------------|------------------|
-      | newsfeedsdk      |    1.0.8.10   |      1007        |
+      | newsfeedsdk      |    1.0.8.10  |      1007        |
 
 #### Changes:
 1. Add dark theme in feedsdk.
