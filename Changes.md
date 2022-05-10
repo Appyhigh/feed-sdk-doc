@@ -2,10 +2,11 @@
 
       | SDK Name         | Lib Version  | SDK Version Code |
       |------------------|--------------|------------------|
-      | newsfeedsdk      |    1.0.8.8   |      1007        |
+      | newsfeedsdk      |    1.0.8.9   |      1007        |
 
 #### Changes:
 1. Add dark theme in feedsdk.
+2. Fixed webview issues in nativeDetailPage when showAds is false.
 
 ----------------------------------------------------------------------------------------------------------------------------
 
