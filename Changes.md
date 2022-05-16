@@ -2,6 +2,15 @@
 
       | SDK Name         | Lib Version  | SDK Version Code |
       |------------------|--------------|------------------|
+      | newsfeedsdk      |    1.0.8.11  |      1007        |
+
+#### Changes:
+1. Fixed coinSymbol crash issue in coinDetails page.
+
+----------------------------------------------------------------------------------------------------------------------------
+
+      | SDK Name         | Lib Version  | SDK Version Code |
+      |------------------|--------------|------------------|
       | newsfeedsdk      |    1.0.8.10  |      1007        |
 
 #### Changes:
