@@ -2,7 +2,7 @@
 
       | SDK Name         | Lib Version  | SDK Version Code |
       |------------------|--------------|------------------|
-      | newsfeedsdk      |    1.0.8.13  |      1007        |
+      | newsfeedsdk      |    1.0.8.14  |      1007        |
 
 #### Changes:
 1. Updated exoplayer to 2.17.1v.
