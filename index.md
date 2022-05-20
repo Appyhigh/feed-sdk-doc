@@ -2,6 +2,15 @@
 
       | SDK Name         | Lib Version  | SDK Version Code |
       |------------------|--------------|------------------|
+      | newsfeedsdk      |    1.0.8.12  |      1007        |
+
+#### Changes:
+1. Fixed createMediaSource crash for videos.
+
+----------------------------------------------------------------------------------------------------------------------------
+
+      | SDK Name         | Lib Version  | SDK Version Code |
+      |------------------|--------------|------------------|
       | newsfeedsdk      |    1.0.8.11  |      1007        |
 
 #### Changes:
