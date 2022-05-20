@@ -37,7 +37,7 @@ A news feed sdk to seamlessly integrate news in your application
     ```groovy
 
 	dependencies {
-	    implementation 'com.github.Appyhigh:news-feed-sdk:1.0.8.14'
+	    implementation 'com.github.Appyhigh:news-feed-sdk:1.0.8.11'
 	    // ...
 	}
     ```
