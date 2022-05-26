@@ -206,6 +206,7 @@ A news feed sdk to seamlessly integrate news in your application
 
 - [Ads](#ads)
 - [Search Sticky Bar](#search-sticky-bar)
+- [Bottom Navigation Nudge](#bottom-navigation-nudge)
 - [Functions](#functions)
 
 ### Ads
@@ -380,6 +381,36 @@ A news feed sdk to seamlessly integrate news in your application
    ```java
    startActivity(new Intent(this, SettingsActivity.class));
    ```
+   
+### Bottom Navigation Nudge
+[(Back to top)](#features)
+
+1) Pass the bottom navigation instance, the position of icon where you want to show nudge, number of notification (optional), Also save the result for removing the nudge
+    
+    ***Kotlin***
+    ```kotlin
+    val object = FeedSdk().setNudge(bottomNavigation,1,5)
+   ```
+   
+    ***Java***
+    ```java
+    BottomNavigationItemView object = new FeedSdk().setNudge(bottomNavigation,1,5);
+   ```
+    
+2) Whenever you want to remove the nudge, pass the object saved in the above step as follows:
+    
+    ***Kotlin***
+    ```kotlin
+    if(object != null)
+        FeedSdk().removeNudge(object)
+    ```
+   
+    ***Java***
+    ```java
+    if(object != null)
+        new FeedSdk().removeNudge(object);
+    ```
+
 ### Functions
 [(Back to top)](#features)
 
