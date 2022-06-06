@@ -1,3 +1,14 @@
+----------------------------------------------------------------------------------------------------------------------------
+
+       | SDK Name         | Lib Version  | SDK Version Code |
+       |------------------|--------------|------------------|
+       | newsfeedsdk      |    1.0.9.2   |      1007        |
+
+ #### Changes:
+ 1. Fixed search issue in crypto elastic search.
+ 2. Changed telegram card profile asset in crypto.
+ 3. Fixed showing trading view from crypto list screen.
+ 4. Added isTaskRoot check condition onBackPressed in postDetailPage.
 
 ----------------------------------------------------------------------------------------------------------------------------
 
