@@ -9,6 +9,7 @@ A news feed sdk to seamlessly integrate news in your application
 - [Features](#features)
 - [Handle Notifications & Dynamic Links](#handle-notifications--dynamic-links)
 - [Notification Payload Examples](#notification-payload-examples)
+- [Common Errors Examples](#common-errors-examples)
 
 ## Initialization
 [(Back to top)](#table-of-contents)
@@ -822,4 +823,38 @@ To add interests directly for api call from parent app, use `setInterestsForAPIC
 }
 ```
 
+## Common Errors Examples
 
+[(Back to top)](#table-of-contents)
+
+ #### Could not GET 'https://jitpack.io/com/github/Appyhigh/news-feed-sdk/....'. Received status code 403 from server: Forbidden
+ 
+ #### Check the following steps to fix it
+ 
+ 1) Make sure you are using the authtoken in your project gradle file.
+ 
+  ```
+  allprojects {
+	    repositories {
+		...
+		maven {
+		    url "https://jitpack.io"
+		    credentials { username authToken }
+		}
+	    }
+	 }
+  ```
+ 2) Check and disable Gradle 'offline mode' and sync project
+ 3) Update the url from "https://jitpack.io" to "https://www.jitpack.io"
+ 
+  ```
+  allprojects {
+	    repositories {
+		...
+		maven {
+		    url "https://jitpack.io"
+		    credentials { username authToken }
+		}
+	    }
+	 }
+```
