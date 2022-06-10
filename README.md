@@ -25,7 +25,7 @@ A news feed sdk to seamlessly integrate news in your application
 	    repositories {
 		...
 		maven {
-		    url "https://jitpack.io"
+		    url "https://www.jitpack.io"
 		    credentials { username authToken }
 		}
 	    }
