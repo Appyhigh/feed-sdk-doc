@@ -8,6 +8,7 @@ A news feed sdk to seamlessly integrate news in your application
 - [Custom Views](#custom-views)
 - [Features](#features)
 - [Handle Notifications & Dynamic Links](#handle-notifications--dynamic-links)
+- [Handle Remote Config](#handle-remote-config)
 - [Notification Payload Examples](#notification-payload-examples)
 - [Common Errors Examples](#common-errors-examples)
 
@@ -687,6 +688,22 @@ To add interests directly for api call from parent app, use `setInterestsForAPIC
        }
        // ...
    ```
+
+## Handle Remote Config
+
+[(Back to top)](#handle-notifications--dynamic-links)
+
+1. Add "feedSdkConfig" key in your remote config with below json structure
+```
+{
+  "socket_series":"",
+  "feed_native_ad_interval":60,
+  "searchSticky":{
+    "timer":300,
+    "workManager":6
+  }
+}
+```
 
 ## Notification Payload Examples
 
