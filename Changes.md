@@ -2,6 +2,23 @@
 
        | SDK Name         | Lib Version  | SDK Version Code |
        |------------------|--------------|------------------|
+       | newsfeedsdk      |    1.0.9.3   |      1007        |
+
+1. Added near_you tab on NewsFeed custom view (Regional Feeds)
+2. Added function for showing nudge for new posts
+3. Added new ui interest selection
+4. Added 'feed_you_make_like_interests' card in for_you for adding interests.
+5. Updated UI in case of network loss.
+6. Added work manager task in search sticky bar & fixed issues in search web page.
+7. Added search native ad in search web page and removed cricket ids.
+8. Added full screen functionality for youtube videos in postDetail page.
+9. Fixed seek-bar, full screen scaling issues in postDetail page.
+10. Added showing youtube in reels.
+
+----------------------------------------------------------------------------------------------------------------------------
+
+       | SDK Name         | Lib Version  | SDK Version Code |
+       |------------------|--------------|------------------|
        | newsfeedsdk      |    1.0.9.2   |      1007        |
 
  #### Changes:
