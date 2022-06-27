@@ -2,6 +2,16 @@
 
        | SDK Name         | Lib Version  | SDK Version Code |
        |------------------|--------------|------------------|
+       | newsfeedsdk      |    1.0.9.4   |      1007        |
+
+1. Added content-mapping for ads in feeds.
+2. Added max lines as 1 in textviews of native_feed_ad_small.
+3. Fixed showing interest sheet after language screen when no interests are selected.
+
+----------------------------------------------------------------------------------------------------------------------------
+
+       | SDK Name         | Lib Version  | SDK Version Code |
+       |------------------|--------------|------------------|
        | newsfeedsdk      |    1.0.9.3   |      1007        |
 
 1. Added near_you tab on NewsFeed custom view (Regional Feeds)
