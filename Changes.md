@@ -2,6 +2,15 @@
 
        | SDK Name         | Lib Version  | SDK Version Code |
        |------------------|--------------|------------------|
+       | newsfeedsdk      |    1.0.9.6   |      1007        |
+
+1. Fixed crash issues from previous versions.
+2. Fixed issues from NewsFeedScrollView.
+
+----------------------------------------------------------------------------------------------------------------------------
+
+       | SDK Name         | Lib Version  | SDK Version Code |
+       |------------------|--------------|------------------|
        | newsfeedsdk      |    1.0.9.5   |      1007        |
 
 1. Added content-mapping for ads in feeds.
