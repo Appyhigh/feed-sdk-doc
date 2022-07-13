@@ -2,7 +2,7 @@
 
        | SDK Name         | Lib Version  | SDK Version Code |
        |------------------|--------------|------------------|
-       | newsfeedsdk      |    1.0.9.6   |      1007        |
+       | newsfeedsdk      |    1.0.9.7   |      1007        |
 
 1. Fixed crash issues from previous versions.
 2. Fixed issues from NewsFeedScrollView.
