@@ -2,6 +2,15 @@
 
        | SDK Name         | Lib Version  | SDK Version Code |
        |------------------|--------------|------------------|
+       | newsfeedsdk      |    1.0.9.8   |      1007        |
+
+1. Updated new report options.
+2. Added report post in reels, postDetail screen.
+
+----------------------------------------------------------------------------------------------------------------------------
+
+       | SDK Name         | Lib Version  | SDK Version Code |
+       |------------------|--------------|------------------|
        | newsfeedsdk      |    1.0.9.7   |      1007        |
 
 1. Fixed crash issues from previous versions.
