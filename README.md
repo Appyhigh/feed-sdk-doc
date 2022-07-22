@@ -686,11 +686,12 @@ To add interests directly for api call from parent app, use `setInterestsForAPIC
 1. Add "feedSdkConfig" key in your remote config with below json structure
 ```
 {
-  "socket_series":"",
-  "feed_native_ad_interval":60,
-  "searchSticky":{
-    "timer":300,
-    "workManager":6
+  "socket_series": "",
+  "feed_native_ad_interval": 60,
+  "searchSticky": {
+    "timer": 300,
+    "workManager": 6,
+    "showStickyOnTop": true
   }
 }
 ```
