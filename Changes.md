@@ -2,6 +2,15 @@
 
        | SDK Name         | Lib Version  | SDK Version Code |
        |------------------|--------------|------------------|
+       | newsfeedsdk      |    1.0.9.9   |      1007        |
+
+1. Added showStickyOnTop in remote config for sticky notification.
+2. Added brand parameter in NotificationClick firebase event.
+
+----------------------------------------------------------------------------------------------------------------------------
+
+       | SDK Name         | Lib Version  | SDK Version Code |
+       |------------------|--------------|------------------|
        | newsfeedsdk      |    1.0.9.8   |      1007        |
 
 1. Updated new report options.
