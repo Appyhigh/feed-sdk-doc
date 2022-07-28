@@ -648,10 +648,6 @@ To add interests directly for api call from parent app, use `setInterestsForAPIC
        // ...
        //pass the intent as param to FeedSdk.handleIntent(this, intent)[Step 2 in Handle Notifications]
        // ...
-       else if (intent.extras != null && !FeedSdk.handleIntent(this, intent)) {
-            //Handle your parent app notifications
-       }
-       // ...
        
    ```
    ***Java***
@@ -672,10 +668,6 @@ To add interests directly for api call from parent app, use `setInterestsForAPIC
            intent.putExtra("matchesMode", matchesMode);
        // ...
        //pass the intent as param to FeedSdk.handleIntent(this, intent)[Step 2 in Handle Notifications]
-       // ...
-       else if (getIntent().getExtras() != null && !FeedSdk.Companion.handleIntent(this, getIntent())) {
-            //Handle your parent app notifications
-       }
        // ...
    ```
 
