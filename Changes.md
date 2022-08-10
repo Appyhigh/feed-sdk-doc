@@ -2,6 +2,15 @@
 
        | SDK Name         | Lib Version  | SDK Version Code |
        |------------------|--------------|------------------|
+       | newsfeedsdk      |    1.0.10    |      1007        |
+
+1. Add block publishers functionality.
+2. Change bottom sheet in NewsFeedScrollView.
+
+----------------------------------------------------------------------------------------------------------------------------
+
+       | SDK Name         | Lib Version  | SDK Version Code |
+       |------------------|--------------|------------------|
        | newsfeedsdk      |    1.0.9.9   |      1007        |
 
 1. Added showStickyOnTop in remote config for sticky notification.
