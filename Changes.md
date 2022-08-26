@@ -2,7 +2,7 @@
 
        | SDK Name         | Lib Version  | SDK Version Code |
        |------------------|--------------|------------------|
-       | newsfeedsdk      |    1.0.10    |      1007        |
+       | newsfeedsdk      |    1.0.11    |      1007        |
 
 1. Add block publishers functionality.
 2. Change bottom sheet in NewsFeedScrollView.
