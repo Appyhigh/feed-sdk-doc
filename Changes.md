@@ -2,7 +2,7 @@
 
        | SDK Name         | Lib Version  | SDK Version Code |
        |------------------|--------------|------------------|
-       | newsfeedsdk      |    1.0.13    |      1007        |
+       | newsfeedsdk      |    1.1.0     |      1007        |
 
 1. Added near you in get-app-wise order api
 2. Added post_source, feed_type in react & comment api
