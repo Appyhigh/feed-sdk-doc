@@ -2,6 +2,18 @@
 
        | SDK Name         | Lib Version  | SDK Version Code |
        |------------------|--------------|------------------|
+       | newsfeedsdk      |    1.0.13    |      1007        |
+
+1. Added near you in get-app-wise order api
+2. Added post_source, feed_type in react & comment api
+3. fix crypto podcasts issue
+4. fix sticky work manager issue
+5. fixed regional feed issue
+
+----------------------------------------------------------------------------------------------------------------------------
+
+       | SDK Name         | Lib Version  | SDK Version Code |
+       |------------------|--------------|------------------|
        | newsfeedsdk      |    1.0.11    |      1007        |
 
 1. Add block publishers functionality.
