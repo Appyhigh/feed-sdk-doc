@@ -461,215 +461,70 @@ To add interests directly for api call from parent app, use `setInterestsForAPIC
 
 [(Back to top)](#table-of-contents)
 
-### Handle Notifications
-
-
-1) Add the following if condition before initializing the sdk.
+**Note** - for dynamic links make sure to pass the intent which has dynamic link data in the below method 
+1) Add the following lines after initializing the sdk where you handle your parent app notification intent.
 
    ***Kotlin***
    ```kotlin
-       if(FeedSdk.isScreenNotification(intent)){
-           SpUtil.pushIntent = intent
-       } else{
-           SpUtil.pushIntent = null
-       }
-        // ...
-       FeedSdk().initializeSdk(this, lifecycle, user, showCricketNotification) //user can be null also
-        // ...
-       
-   ```
-   ***Java***
-   ```java
-       if(FeedSdk.Companion.isScreenNotification(getIntent())){
-           SpUtil.Companion.setPushIntent(getIntent());
-       } else{
-            SpUtil.Companion.setPushIntent(null);
-        }
-       // ...
-       new FeedSdk().initializeSdk(this, getLifecycle(), user, showCricketNotification); //user can be null also  
-       // ...
-   ```
-2) Add the following lines after initializing the sdk where you handle your parent app notification intent.
+       FeedSdk().checkFeedSDKNotifications(this, getIntent(), object : ShowFeedScreenListener {
+	   override fun showFeeds() {
+	       //show feeds tab/screen
+	   }
 
-   ***Kotlin***
-   ```kotlin
-       if(FeedSdk.isScreenNotification(intent) || FeedSdk.fromLiveMatch(intent)){
-           Handler(Looper.getMainLooper()).postDelayed({
-               if(FeedSdk.checkFeedSdkTab("explore", intent)){
-                  //open tab or activity that handles explore view of feedSDK
-                  //ignore if not using explore view in parent app
-               } else if(FeedSdk.checkFeedSdkTab("reels", intent)){
-                   //open tab or activity that handles reels view of feedSDK
-                   //ignore if not using reels view in parent app
-               } else {
-                  //open tab or activity that handles feeds view of feedSDK
-                  //ignore if not using feeds view in parent app
-               }
-           },1000)
-       } else if (intent.extras != null && !FeedSdk.handleIntent(this, intent)) {
-            //Handle your parent app notifications
-       }
+	   override fun showReels() {
+	       //show reels tab/screen
+	   }
+
+	   override fun showExplore() {
+	       //show explore tab/screen
+	   }
+
+	   override fun checkParentAppNotifications() {
+	       //write your logic for your app notifications
+	   }
+	})
+	
+	override fun onNewIntent(intent: Intent) {
+	   super.onNewIntent(intent)
+	   checkNotifications(intent)
+	}
+
+
        // ...
    ```
    ***Java***
    ```java
-       if(FeedSdk.Companion.isScreenNotification(getIntent()) || FeedSdk.Companion.fromLiveMatch(getIntent())){
-           new Handler(Looper.getMainLooper()).postDelayed(new Runnable() {
-               @Override
-               public void run() {
-                   if(FeedSdk.Companion.checkFeedSdkTab("explore", getIntent())){
-                       //open tab or activity that handles explore view of feedSDK
-                       //ignore if not using explore view in parent app
-                   } else if(FeedSdk.Companion.checkFeedSdkTab("reels", getIntent())){
-                       //open tab or activity that handles reels view of feedSDK
-                       //ignore if not using reels view in parent app
-                   } else {
-                      //open tab or activity that handles feeds view of feedSDK
-                      //ignore if not using feeds view in parent app
-                   }
-               }
-           }, 1000);
-       } else if (getIntent().getExtras() != null && !FeedSdk.Companion.handleIntent(this, getIntent())) {
-            //Handle your parent app notifications
-       }
+       new FeedSdk().checkFeedSDKNotifications(this, getIntent(), new ShowFeedScreenListener() {
+	   @Override
+	   public void showFeeds() {
+	       //show feeds tab/screen
+	   }
+
+	   @Override
+	   public void showReels() {
+	       //show reels tab/screen
+	   }
+
+	   @Override
+	   public void showExplore() {
+	       //show explore tab/screen
+	   }
+
+	   @Override
+	   public void checkParentAppNotifications() {
+	       //write your logic for your app notifications
+	   }
+	});
+
+	@Override
+	void onNewIntent(Intent intent) {
+	   super.onNewIntent(intent);
+	   checkNotifications(intent);
+	}
+
        // ...
    ```
 
-
-### Handle Dynamic Links
-
-[(Back to top)](#handle-notifications--dynamic-links)
-
-1) Fetch and check the params("feed_id","is_native","podcast_id","filename","matchType","pwa","matchesMode") from firebase dynamic link.
-
-   ***Kotlin***
-   ```kotlin
-      Firebase.dynamicLinks
-           .getDynamicLink(intent)
-           .addOnSuccessListener(this) { pendingDynamicLinkData ->
-               // Get deep link from result (may be null if no link is found)
-               var deepLink: Uri? = null
-              try {
-                  if (pendingDynamicLinkData != null) {
-                      deepLink = pendingDynamicLinkData.link
-                      try {
-		      		  if (deepLink!!.getQueryParameter("feed_id") != null) {
-					if(deepLink!!.getQueryParameter("is_native")!=null){
-					   isNative = true
-					}
-					post_id= pendingDynamicLinkData.link?.getQueryParameter("feed_id")!!
-				  }
-				  if (deepLink!!.getQueryParameter("podcast_id") != null) {
-				      podcast_id = deepLink.getQueryParameter("podcast_id")!!
-				  }
-				  if (deepLink!!.getQueryParameter("covid_card") != null) {
-				      covid_card = deepLink.getQueryParameter("covid_card")!!
-				  }
-				  if (deepLink!!.getQueryParameter("filename") != null 
-					  && deepLink.getQueryParameter("matchType") != null
-					  && deepLink.getQueryParameter("pwa") != null) {
-					      filename = deepLink.getQueryParameter("filename")!!
-					      matchType = deepLink.getQueryParameter("matchType")!!
-					      pwa = deepLink.getQueryParameter("pwa")!!
-				  }
-				  if (deepLink.getQueryParameter("matchesMode") != null) {
-				       matchesMode = deepLink.getQueryParameter("matchesMode")!!
-				  }
-
-			      } catch (ex:Exception){}
-			      fetchDynamicData.onFetchSuccess()
-                  }else{
-                      fetchDynamicData.onFetchSuccess()
-                  }
-              }catch (e:Exception){
-                  e.printStackTrace()
-                  fetchDynamicData.onFetchSuccess()
-              }
-           }
-           .addOnFailureListener(this) {
-               e -> Log.w("TAG", "getDynamicLink:onFailure", e)
-           }
-   ```
-   ***Java***
-   ```java
-       FirebaseDynamicLinks.getInstance().getDynamicLink(intent)
-               .addOnSuccessListener(new OnSuccessListener<PendingDynamicLinkData>() {
-                   @Override
-                   public void onSuccess(PendingDynamicLinkData pendingDynamicLinkData) {
-                       Uri deepLink = null;
-                       if (pendingDynamicLinkData != null) {
-                                deepLink = pendingDynamicLinkData.getLink();
-		       		if(deepLink.getQueryParameter("feed_id") != null) {
-					if(deepLink.getQueryParameter("is_native")!=null){
-						isNative = true
-					}
-				       post_id = deepLink.getQueryParameter("feed_id");
-				}
-				if (deepLink.getQueryParameter("filename") != null 
-					&& deepLink.getQueryParameter("matchType") != null
-					&& deepLink.getQueryParameter("pwa") != null) {
-					filename = deepLink.getQueryParameter("filename");
-					matchType = deepLink.getQueryParameter("matchType");
-					pwa = deepLink.getQueryParameter("pwa");
-				}
-                           	if (deepLink.getQueryParameter("podcast_id") != null) {
-                                	podcast_id = deepLink.getQueryParameter("podcast_id");
-                           	}
-			   	if (deepLink.getQueryParameter("covid_card") != null) {
-                              		covid_card = deepLink.getQueryParameter("covid_card");
-                           	}
-                           	if (deepLink.getQueryParameter("matchesMode") != null) {
-                                	matchesMode = deepLink.getQueryParameter("matchesMode");
-                           	}
-                       }
-                   }
-               })
-               .addOnFailureListener(new OnFailureListener() {
-                   @Override
-                   public void onFailure(@NonNull Exception e) {
-                       e.printStackTrace();
-                   }
-               });
-   ```
-2) Add the fetched params as extras to intent so that you can pass that as param in FeedSdk.handleIntent(this, intent)**[Step 2 in Handle Notifications]**
-
-   ***Kotlin***
-   ```kotlin
-       if(post_id.isNotEmpty()) intent.putExtra("post_id", post_id)
-       if(isNative) intent.putExtra("is_native", "true")
-       if(podcast_id.isNotEmpty()) intent.putExtra("podcast_id",podcast_id)
-       if(covid_card.isNotEmpty()) intent.putExtra("covid_card",covid_card)
-       if(filename.isNotEmpty() && matchType.isNotEmpty() && pwa.isNotEmpty()){
-		   intent.putExtra("filename", filename)
-		   intent.putExtra("matchType", matchType)
-		   intent.putExtra("link", pwa)
-       }
-       if(matchesMode.isNotEmpty()) intent.putExtra("matchesMode", matchesMode)
-       // ...
-       //pass the intent as param to FeedSdk.handleIntent(this, intent)[Step 2 in Handle Notifications]
-       // ...
-       
-   ```
-   ***Java***
-   ```java
-       if (!post_id.isEmpty())
-           intent.putExtra("post_id", post_id);
-       if(isNative) intent.putExtra("is_native", "true");
-       if (!filename.isEmpty() && !matchType.isEmpty() && !pwa.isEmpty()) {
-		   intent.putExtra("filename", filename);
-		   intent.putExtra("matchType", matchType);
-		   intent.putExtra("link", pwa);
-       }
-       if (!podcast_id.isEmpty())
-           intent.putExtra("podcast_id", podcast_id);
-       if (!covid_card.isEmpty())
-	   intent.putExtra("covid_card", covid_card);
-       if(!matchesMode.isEmpty())
-           intent.putExtra("matchesMode", matchesMode);
-       // ...
-       //pass the intent as param to FeedSdk.handleIntent(this, intent)[Step 2 in Handle Notifications]
-       // ...
-   ```
 
 ## Handle Remote Config
 
